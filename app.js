@@ -23,7 +23,6 @@ function playRound(playerSelection, computerSelection) {
                 console.log("YOU WIN! Rock beats scissors!");
                 return "playerWin";
             }
-            //break;
         case "paper":
             if (computerSelection == "paper") {
                 console.log("It's a tie!");
@@ -54,7 +53,7 @@ function game() {
     let computerWin = 0;
     for (let i = 0; i < 5; i++) {
         console.log("ROUND " + (i + 1));
-        const playerSelection = "scissors";
+        const playerSelection = prompt("Please choose rock, paper or scissors").toLowerCase();
         const computerSelection = computerPlay();
         console.log("Player selection: " + playerSelection);
         console.log("Computer selection: " + computerSelection);
